@@ -2,10 +2,6 @@
 #include <stack>
 using namespace std;
 
-/*
-    To sort a stack in ascending order {from top to bottom}
-*/
-
 // func that displays a stack
 void display_stack(stack<int> st)   {
     if(!st.empty()) {
@@ -26,15 +22,12 @@ int main()  {
     // taking input
     cout << "Enter the number of elements: ";
     cin >> size;
-    int* arr = new int[size];
 
-    cout << "Enter the elements:"<< endl;
+    cout << "Enter the elements:"<< endl;    
     for(int i = 0; i < size; i++)   {
-        cin >> *(arr + i);
-    }
-    
-    for(int i = 0; i < size; i++)   {
-        st.push(*(arr + i));
+        int val;
+        cin >> val;
+        st.push(val);
     }
 
     // display original and temporary stacks
@@ -47,23 +40,24 @@ int main()  {
     temp.push(st.top());
     st.pop();
 
-    // as long as the original stack is not emptied,
-    // we keep adding elements to the temp stack, while
-    // checking at each entry if the element to be added
-    // is greater than the element at the top of the temp stack
-    // if it is, then we pop it and push it to the "original stack's" top,
-    // and loop till we find a element in the temp
-    // stack that is greater than the element we are adding
-    // once found, or we hit the bottom of the temp stack, we push the
-    // element onto the temp stack.
+    /*as long as the original stack is not emptied,
+    we keep adding elements to the temp stack, while
+    checking at each entry if the element to be added
+    is greater than the element at the top of the temp stack
+    if it is, then we pop it and push it to the "original stack's" top,
+    and loop till we find a element in the temp
+    stack that is greater than the element we are adding
+    once found, or we hit the bottom of the temp stack, we push the
+    element onto the temp stack.*/
+
     while(!st.empty())  {
-        if(st.top() < temp.top())   {
+        if(st.top() <= temp.top())   {
             temp.push(st.top());
             st.pop();
         }   else    {
             int x = st.top();
             st.pop();
-            while(x > temp.top() && !temp.empty())   {
+            while(!temp.empty() && x > temp.top())   {
                 st.push(temp.top());
                 temp.pop();
             }
