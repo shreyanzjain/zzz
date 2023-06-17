@@ -1,5 +1,4 @@
 /*
-Tsec Mashups 3 - #2
 https://codeforces.com/gym/447041/problem/A
 */
 
