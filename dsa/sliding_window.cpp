@@ -41,6 +41,8 @@ int findMaxSum(vector<int>& arr, int k, vector<int>& dummy){
     return maxSum;
 }
 
+
+// Driver Code
 int main(){
     int n, window_size, maxSum;
     vector<int> arr;
