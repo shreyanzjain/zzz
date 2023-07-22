@@ -25,10 +25,18 @@ void swap_in_place(int& a, int& b){
 
 void bubbleSort(vector<int>& arr){
     for(int i = 0; i < arr.size(); i++){
-        for(int j = 0; j < arr.size() - 1; j++){
+        int swap_ctr = 0;
+        // 'arr.size() - 1 - i' because every round the "largest element" is in it's place!
+        for(int j = 0; j < arr.size() - 1 - i; j++){
             if(arr[j] > arr[j + 1]){
                 swap_in_place(arr[j], arr[j + 1]);
+                swap_ctr++;
             }
+        }
+
+        if(swap_ctr == 0){
+            // the array is sorted already, so we can break out of this loop
+            break;
         }
     }
 }
