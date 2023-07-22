@@ -42,3 +42,5 @@ int main(){
     }   cout << endl;
     return 0;
 }
+
+// Follow Up:  Is this a stable or an unstable algorithm?
