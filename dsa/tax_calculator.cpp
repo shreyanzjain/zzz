@@ -14,7 +14,7 @@ Now, we have to calculate the tax given a salary X
 
 using namespace std;
 
-float calc_tax(vector<int>& tax_slabs, vector<int>& tax_rate, int salary){
+float calc_tax(vector<float>& tax_slabs, vector<float>& tax_rate, int salary){
 
     int sum_calculated = 0;
     float tax = 0;
@@ -43,12 +43,12 @@ float calc_tax(vector<int>& tax_slabs, vector<int>& tax_rate, int salary){
 }
 
 int main(){
-    vector<int> tax_slabs;
-    vector<int> tax_rate;
+    vector<float> tax_slabs;
+    vector<float> tax_rate;
 
     int no_of_slabs;
     cin >> no_of_slabs;
-    int val;
+    float val;
 
     for(int i = 0; i < no_of_slabs; i++){
         cin >> val;
