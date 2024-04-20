@@ -6,7 +6,7 @@ using namespace std;
 void swapChars(char &a, char &b);
 
 int main() {
-    string s = "  Mr John Snow        ";
+    string s = " HHAHAH ADNAJFNJAF    ";
     int end = s.length() - 1;
     // find the last non-space character
     while(s[end] == 0x20){
@@ -53,6 +53,14 @@ int main() {
             }  else {
                 left++;
             } 
+        }
+    }
+
+    if(ctr == s.length() - 1){
+        for(int i = 0; i < ctr; i = i + 3){
+            s[i] = '%';
+            s[i + 1] = '2';
+            s[i + 2] = '0';
         }
     }
     cout << "\""<< s << "\"";
