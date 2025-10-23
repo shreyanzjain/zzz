@@ -1,4 +1,4 @@
-// sorting a stack
+// sorting a stack with the minimum value on top
 
 #include <iostream>
 #include <stack>
