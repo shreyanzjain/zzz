@@ -1,3 +1,4 @@
+# rbr: recursive binary removal
 # script to recursively remove all the .exe 
 # files generated when compiling and running cpp files
 
